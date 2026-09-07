@@ -6,6 +6,7 @@ import 'package:flutter_project_1/bloc/home_page_bloc.dart';
 import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
 import 'package:flutter_project_1/widgets/PostContainer.dart';
 
+import 'i18n/strings.g.dart';
 import 'main.dart';
 
 @RoutePage()
@@ -36,8 +37,8 @@ class NoticeBoardScreen extends StatelessWidget {
                     .toList();
 
                 if (boardPosts.isEmpty) {
-                  return const Center(
-                    child: Text('게시글이 없습니다.'),
+                  return Center(
+                    child: Text(t.home.empty),
                   );
                 }
 

@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project_1/i18n/strings.g.dart';
 import 'package:flutter_project_1/post/domain/entity/post.dart';
 import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
 import 'package:flutter_project_1/widgets/HashTag.dart';
@@ -15,7 +16,7 @@ class PostScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CenterTitleAppHeader(title: "게시글 이름"),
+      appBar: CenterTitleAppHeader(title: t.posts.name),
       backgroundColor: Colors.grey[100],
       body: Padding(
         padding: EdgeInsets.all(30),

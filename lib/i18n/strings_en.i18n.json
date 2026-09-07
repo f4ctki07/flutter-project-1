@@ -1,0 +1,25 @@
+{
+  "boards": {
+    "name": "Board Name",
+    "create": "Create Board"
+  },
+  "posts": {
+    "name": "Post Name"
+  },
+  "home": {
+    "initializing": "Initializing",
+    "retry": "Retry",
+    "empty": "No Posts",
+    "error": "Failed to load data. $error"
+  },
+  "account": {
+    "nickname": "Nickname",
+    "email": "Email"
+  },
+  "language": {
+    "title": "Language",
+
+    "korean": "한국어",
+    "english": "영어"
+  }
+}

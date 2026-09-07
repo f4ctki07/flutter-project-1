@@ -8,7 +8,7 @@ abstract class NetworkModule {
   @lazySingleton
   Dio get dio => Dio(
     BaseOptions(
-      baseUrl: "",
+      baseUrl: '',
     ),
   );
 

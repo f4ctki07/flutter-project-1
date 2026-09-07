@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_project_1/i18n/strings.g.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -41,7 +42,7 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
       // 여기서는 2초 지연으로 API 호출을 흉내 냅니다.
       // await Future.delayed(const Duration(seconds: 2));
 
-      // throw Exception("");
+      // throw Exception('');
 
       final postList = await getPostsUseCase();
       // 3. 성공 상태로 변경하고, 로드된 데이터를 함께 전달
@@ -49,7 +50,7 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
 
     } catch (e) {
       // 4. 에러 발생 시 에러 상태로 변경하고, 에러 메시지를 전달
-      emit(HomePageState.error(message: '데이터를 불러오는 데 실패했습니다: $e'));
+      emit(HomePageState.error(message: t.home.error(error: e.toString())));
     }
   }
 }

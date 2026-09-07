@@ -8,6 +8,6 @@ part 'post_apis.g.dart';
 abstract class PostApi {
   factory PostApi(Dio dio, {String baseUrl}) = _PostApi;
   
-  @GET("/posts")
+  @GET('/posts')
   Future<List<PostModel>> getPosts();
 }

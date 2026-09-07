@@ -4,6 +4,7 @@ import 'package:flutter_project_1/widgets/PostContainer.dart';
 import 'package:flutter_project_1/di/injection.dart';
 
 import 'bloc/home_page_bloc.dart';
+import 'i18n/strings.g.dart';
 
 Widget HomePage(BuildContext context) {
   return BlocBuilder<HomePageBloc, HomePageState>(
@@ -11,7 +12,7 @@ Widget HomePage(BuildContext context) {
       // state.when을 사용하면 각 상태에 따라 다른 위젯을 쉽게 반환할 수 있음
       return state.when(
         // 초기 상태
-        init: () => const Center(child: Text('초기화 중...')),
+        init: () => Center(child: Text(t.home.initializing)),
         // 로딩 중 상태
         loading: () => const Center(child: CircularProgressIndicator()),
         // 성공 상태
@@ -43,7 +44,7 @@ Widget HomePage(BuildContext context) {
                 onPressed: () {
                   context.read<HomePageBloc>().add(const HomePageEvent.load());
                 },
-                child: const Text('다시 시도'),
+                child: Text(t.home.retry),
               ),
             ],
           ),

@@ -11,9 +11,9 @@ class AppNavigationBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       items: [
-        BottomNavigationBarItem(icon: selectedIndex == 0 ? Assets.icons.homeFilled.svg() : Assets.icons.homeOutlined.svg(), label: ""),
-        BottomNavigationBarItem(icon: selectedIndex == 1 ? Assets.icons.viewGridFilled.svg() : Assets.icons.viewGridOutlined.svg(), label: ""),
-        BottomNavigationBarItem(icon: selectedIndex == 2 ? Assets.icons.accountFilled.svg() : Assets.icons.accountOutlined.svg(), label: ""),
+        BottomNavigationBarItem(icon: selectedIndex == 0 ? Assets.icons.homeFilled.svg() : Assets.icons.homeOutlined.svg(), label: ''),
+        BottomNavigationBarItem(icon: selectedIndex == 1 ? Assets.icons.viewGridFilled.svg() : Assets.icons.viewGridOutlined.svg(), label: ''),
+        BottomNavigationBarItem(icon: selectedIndex == 2 ? Assets.icons.accountFilled.svg() : Assets.icons.accountOutlined.svg(), label: ''),
       ],
       currentIndex: selectedIndex,
       onTap: onTap,

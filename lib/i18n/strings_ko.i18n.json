@@ -1,0 +1,25 @@
+{
+  "boards": {
+    "name": "게시판 이름",
+    "create": "게시판 만들기"
+  },
+  "posts": {
+    "name": "게시글 이름"
+  },
+  "home": {
+    "initializing": "초기화 중",
+    "retry": "다시 시도",
+    "empty": "게시글이 없습니다.",
+    "error": "데이터를 불러오는 데 실패했습니다. $error"
+  },
+  "account": {
+    "nickname": "닉네임",
+    "email": "이메일"
+  },
+  "language": {
+    "title": "언어",
+
+    "korean": "한국어",
+    "english": "영어"
+  }
+}
