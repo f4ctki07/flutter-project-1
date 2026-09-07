@@ -2,8 +2,7 @@ import 'dart:typed_data';
 
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project_1/main.dart';
-import 'package:flutter_project_1/post/data/model/post.dart';
+import 'package:flutter_project_1/post/domain/entity/post.dart';
 import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
 import 'package:flutter_project_1/widgets/HashTag.dart';
 

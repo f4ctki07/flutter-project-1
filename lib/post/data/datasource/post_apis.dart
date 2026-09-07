@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import '../data/model/post.dart';
+import '../model/post_model.dart';
 
 part 'post_apis.g.dart';
 
-@RestApi(baseUrl: "")
+@RestApi()
 abstract class PostApi {
   factory PostApi(Dio dio, {String baseUrl}) = _PostApi;
   
   @GET("/posts")
-  Future<List<Post>> getPosts();
+  Future<List<PostModel>> getPosts();
 }

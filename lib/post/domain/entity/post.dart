@@ -1,11 +1,3 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
-import 'package:json_annotation/json_annotation.dart';
-
-part 'post.g.dart';
-
-@JsonSerializable()
 class Post {
   // final String uuid;
   final String title;
@@ -33,8 +25,4 @@ class Post {
     // required this.deadline,
     required this.images,
   });
-
-  factory Post.fromJson(Map<String, dynamic> json) =>_$PostFromJson(json);
-
-  Map<String, dynamic> toPost() => _$PostToJson(this);
 }

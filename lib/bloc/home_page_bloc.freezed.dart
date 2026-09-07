@@ -55,12 +55,11 @@ extension HomePageEventPatterns on HomePageEvent {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( LoadEvent value)?  load,TResult Function( RestoreEvent value)?  restore,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( LoadEvent value)?  load,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case LoadEvent() when load != null:
-return load(_that);case RestoreEvent() when restore != null:
-return restore(_that);case _:
+return load(_that);case _:
   return orElse();
 
 }
@@ -78,12 +77,11 @@ return restore(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( LoadEvent value)  load,required TResult Function( RestoreEvent value)  restore,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( LoadEvent value)  load,}){
 final _that = this;
 switch (_that) {
 case LoadEvent():
-return load(_that);case RestoreEvent():
-return restore(_that);case _:
+return load(_that);case _:
   throw StateError(message: 'Unexpected subclass');
 
 }
@@ -100,12 +98,11 @@ return restore(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( LoadEvent value)?  load,TResult? Function( RestoreEvent value)?  restore,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( LoadEvent value)?  load,}){
 final _that = this;
 switch (_that) {
 case LoadEvent() when load != null:
-return load(_that);case RestoreEvent() when restore != null:
-return restore(_that);case _:
+return load(_that);case _:
   return null;
 
 }
@@ -122,11 +119,10 @@ return restore(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  load,TResult Function()?  restore,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  load,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case LoadEvent() when load != null:
-return load();case RestoreEvent() when restore != null:
-return restore();case _:
+return load();case _:
   return orElse();
 
 }
@@ -144,11 +140,10 @@ return restore();case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  load,required TResult Function()  restore,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  load,}) {final _that = this;
 switch (_that) {
 case LoadEvent():
-return load();case RestoreEvent():
-return restore();case _:
+return load();case _:
   throw StateError(message: 'Unexpected subclass');
 
 }
@@ -165,11 +160,10 @@ return restore();case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  load,TResult? Function()?  restore,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  load,}) {final _that = this;
 switch (_that) {
 case LoadEvent() when load != null:
-return load();case RestoreEvent() when restore != null:
-return restore();case _:
+return load();case _:
   return null;
 
 }
@@ -201,38 +195,6 @@ int get hashCode => runtimeType.hashCode;
 @override
 String toString() {
   return 'HomePageEvent.load()';
-}
-
-
-}
-
-
-
-
-/// @nodoc
-
-
-class RestoreEvent implements HomePageEvent {
-  const RestoreEvent();
-  
-
-
-
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RestoreEvent);
-}
-
-
-@override
-int get hashCode => runtimeType.hashCode;
-
-@override
-String toString() {
-  return 'HomePageEvent.restore()';
 }
 
 

@@ -14,7 +14,7 @@ import 'package:flutter/material.dart' as _i6;
 import 'package:flutter_project_1/CreateBoardScreen.dart' as _i1;
 import 'package:flutter_project_1/main.dart' as _i2;
 import 'package:flutter_project_1/NoticeBoardScreen.dart' as _i3;
-import 'package:flutter_project_1/post/data/model/post.dart' as _i7;
+import 'package:flutter_project_1/post/domain/entity/post.dart' as _i7;
 import 'package:flutter_project_1/PostScreen.dart' as _i4;
 
 /// generated route for

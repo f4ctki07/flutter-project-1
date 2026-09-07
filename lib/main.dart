@@ -4,27 +4,23 @@ import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widget_previews.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_1/AccountPage.dart';
 import 'package:flutter_project_1/AppRouter.dart';
 import 'package:flutter_project_1/AppRouter.gr.dart';
 import 'package:flutter_project_1/HomePage.dart';
 import 'package:flutter_project_1/NoticeBoardListPage.dart';
 import 'package:flutter_project_1/gen/assets.gen.dart';
-import 'package:flutter_project_1/post/api/post_apis.dart';
-import 'package:flutter_project_1/post/data/model/post.dart';
 import 'package:flutter_project_1/widgets/AppNavigationBar.dart';
 import 'package:flutter_project_1/widgets/LeftTitleAppHeader.dart';
-import 'package:dio/dio.dart';
 
-List<Post> postList = <Post>[];
+import 'bloc/home_page_bloc.dart';
+import 'di/injection.dart';
 
-void main() {
+Future<void> main() async {
+  await configureDependencies();
+
   runApp(const MyApp());
-
-  final dio = Dio();
-  dio.options.headers["Demo-header"] = "demo header";
-  final postApiClient = PostApi(dio);
-  postApiClient.getPosts().then((list) => postList = list);
 }
 
 class MyApp extends StatelessWidget {
@@ -37,10 +33,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final AppRouter _appRouter = AppRouter();
+    final AppRouter appRouter = AppRouter();
 
-    return MaterialApp.router(
-      routerConfig: _appRouter.config(),
+    return BlocProvider<HomePageBloc>(
+      create: (_) =>
+      getIt<HomePageBloc>()..add(const HomePageEvent.load()),
+      child: MaterialApp.router(
+        routerConfig: appRouter.config(),
+      ),
     );
   }
 }

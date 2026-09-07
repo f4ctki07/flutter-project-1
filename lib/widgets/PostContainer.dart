@@ -1,9 +1,8 @@
-import 'dart:typed_data';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_1/AppRouter.gr.dart';
-import 'package:flutter_project_1/post/data/model/post.dart';
+
+import '../post/domain/entity/post.dart';
 
 class PostContainer extends StatelessWidget {
   final Post post;
