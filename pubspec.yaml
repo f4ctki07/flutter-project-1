@@ -54,6 +54,8 @@ dependencies:
   slang: ^4.19.0
   slang_flutter: ^4.19.0
 
+  flutter_web_auth_2: ^5.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -70,6 +72,8 @@ dev_dependencies:
   slang_build_runner: ^4.19.0
 
   freezed: ^3.2.5 # Freezed 코드 생성기
+
+  http_mock_adapter: ^0.6.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

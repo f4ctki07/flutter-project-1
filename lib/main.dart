@@ -12,6 +12,8 @@ import 'package:flutter_project_1/AppRouter.gr.dart';
 import 'package:flutter_project_1/HomePage.dart';
 import 'package:flutter_project_1/NoticeBoardListPage.dart';
 import 'package:flutter_project_1/gen/assets.gen.dart';
+import 'package:flutter_project_1/post/domain/repository/post_repository.dart';
+import 'package:flutter_project_1/test/home_page_bloc_test.dart';
 import 'package:flutter_project_1/widgets/AppNavigationBar.dart';
 import 'package:flutter_project_1/widgets/LeftTitleAppHeader.dart';
 
@@ -22,6 +24,9 @@ import 'i18n/strings.g.dart';
 
 Future<void> main() async {
   await configureDependencies();
+
+  await getIt.unregister<PostRepository>();
+  getIt.registerLazySingleton<PostRepository>(() => FakePostRepository(),);
 
   WidgetsFlutterBinding.ensureInitialized(); // add this
   LocaleSettings.useDeviceLocale(); // and this

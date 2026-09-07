@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_1/i18n/strings.g.dart';

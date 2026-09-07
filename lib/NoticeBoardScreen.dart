@@ -7,7 +7,6 @@ import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
 import 'package:flutter_project_1/widgets/PostContainer.dart';
 
 import 'i18n/strings.g.dart';
-import 'main.dart';
 
 @RoutePage()
 class NoticeBoardScreen extends StatelessWidget {
