@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_1/widgets/Input.dart';
+import 'package:flutter_project_1/ui/widgets/Input.dart';
 
 class InputWithButton extends StatelessWidget {
   final String label;

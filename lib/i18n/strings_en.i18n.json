@@ -13,6 +13,7 @@
     "error": "Failed to load data. $error"
   },
   "account": {
+    "login": "login",
     "nickname": "Nickname",
     "email": "Email"
   },

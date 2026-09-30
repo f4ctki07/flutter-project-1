@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project_1/widgets/PostContainer.dart';
+import 'package:flutter_project_1/ui/widgets/PostContainer.dart';
 
-import 'bloc/home_page_bloc.dart';
-import 'i18n/strings.g.dart';
+import '../bloc/home_page_bloc.dart';
+import '../i18n/strings.g.dart';
 
 Widget HomePage(BuildContext context) {
   return BlocBuilder<HomePageBloc, HomePageState>(

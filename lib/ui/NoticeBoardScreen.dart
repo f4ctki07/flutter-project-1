@@ -3,10 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_1/bloc/home_page_bloc.dart';
-import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
-import 'package:flutter_project_1/widgets/PostContainer.dart';
+import 'package:flutter_project_1/ui/widgets/CenterTitleAppHeader.dart';
+import 'package:flutter_project_1/ui/widgets/PostContainer.dart';
 
-import 'i18n/strings.g.dart';
+import '../i18n/strings.g.dart';
 
 @RoutePage()
 class NoticeBoardScreen extends StatelessWidget {

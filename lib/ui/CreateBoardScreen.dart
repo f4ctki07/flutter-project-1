@@ -1,10 +1,10 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project_1/NoticeBoardListPage.dart';
+import 'package:flutter_project_1/ui/NoticeBoardListPage.dart';
 import 'package:flutter_project_1/i18n/strings.g.dart';
-import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
-import 'package:flutter_project_1/widgets/Input.dart';
+import 'package:flutter_project_1/ui/widgets/CenterTitleAppHeader.dart';
+import 'package:flutter_project_1/ui/widgets/Input.dart';
 
 @RoutePage()
 class CreateBoardScreen extends StatelessWidget {

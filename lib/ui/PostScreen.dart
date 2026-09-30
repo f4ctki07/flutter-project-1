@@ -2,8 +2,8 @@ import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_1/i18n/strings.g.dart';
 import 'package:flutter_project_1/post/domain/entity/post.dart';
-import 'package:flutter_project_1/widgets/CenterTitleAppHeader.dart';
-import 'package:flutter_project_1/widgets/HashTag.dart';
+import 'package:flutter_project_1/ui/widgets/CenterTitleAppHeader.dart';
+import 'package:flutter_project_1/ui/widgets/HashTag.dart';
 
 @RoutePage()
 class PostScreen extends StatelessWidget {
