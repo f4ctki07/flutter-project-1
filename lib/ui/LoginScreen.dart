@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
           '/authorize',
           {
             "client_id": "77d2191b-a5df-4024-9f8a-b2b1c9803239",
-            "redirect_uri": "http://localhost:3000/redirect",
+            "redirect_uri": "my-test-app://callback/",
             "response_type": "code",
             "scope": "student_id",
             "code_challenge": "",
@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       final resultUrl = await FlutterWebAuth2.authenticate(
         url: oauthUrl.toString(),
-        callbackUrlScheme: "my-custom-app",
+        callbackUrlScheme: "my-test-app",
       );
       developer.log(Uri.parse(resultUrl).queryParameters['code']!);
       if (mounted) {
